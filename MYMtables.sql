@@ -65,7 +65,8 @@ CREATE TABLE "patient" (
   "dob" datetime NOT NULL,
   "sex" char,
   "p_height_in" int,
-  "p_weight_lb" int
+  "p_weight_lb" int,
+  CHECK (sex in ('M', 'F', 'X'))
 );
 
 CREATE TABLE "outside_provider" (
