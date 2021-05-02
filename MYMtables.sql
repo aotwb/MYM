@@ -49,13 +49,15 @@ CREATE TABLE "email" (
 CREATE TABLE "nurse" (
   "ID" int PRIMARY KEY,
   "office_number" int,
-  "salary" int NOT NULL
+  "salary" int NOT NULL,
+  CHECK (salary>=0)
 );
 
 CREATE TABLE "pharmacist" (
   "ID" int PRIMARY KEY,
   "office_number" int,
-  "salary" int NOT NULL
+  "salary" int NOT NULL,
+  CHECK (salary>=0)
 );
 
 CREATE TABLE "patient" (
